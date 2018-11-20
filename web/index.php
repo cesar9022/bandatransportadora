@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Bogota');
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
