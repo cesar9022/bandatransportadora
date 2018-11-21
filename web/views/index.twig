@@ -42,8 +42,13 @@
 <div>
 <script>
 
+function Actualizar(){
+  $.get('https://bandatransportadora.herokuapp.com/consultarConteo',function(respuesta){
+    document.getElementById("counter").innerHTML = respuesta;
+  }
+}
 
-
+setInterval(Actualizar(),1000);
 </script>
 </div>
 {% endblock %}
