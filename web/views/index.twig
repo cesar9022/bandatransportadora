@@ -27,7 +27,7 @@
     </div>
     <div class="col-md-6">
       <h3><span class="glyphicon glyphicon-link"></span> Datos estadisticos</h3>
-      <div class="counter">0</div>
+      <div class="counter" id="counter">0</div>
       <ul>
         <li>Tiempo u horas de trabajo de la linea de llenado</li>
         <li>Cantidad de producto culminado</li> 
@@ -41,23 +41,9 @@
 </div>
 <div>
 <script>
-    function count(){
-  var counter = { var: 3 };
-  TweenMax.to(counter, 3, {
-    var: 100, 
-    onUpdate: function () {
-      var number = Math.ceil(counter.var);
-      $('.counter').html(number);
-      if(number === counter.var){ count.kill(); }
-    },
-    onComplete: function(){
-      count();
-    },    
-    ease:Circ.easeOut
-  });
-}
- 
-count();
+
+
+
 </script>
 </div>
 {% endblock %}
