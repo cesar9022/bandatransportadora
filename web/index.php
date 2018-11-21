@@ -35,7 +35,7 @@ $app->get('/guardar/{conteo}',
 $app->get('/consultarConteo', 
 	function() use($app){
 	$dbconexion=pg_connect( "host=ec2-23-23-80-20.compute-1.amazonaws.com port=5432 dbname=d7l7vav8kt18d9 user=oabpbkgthojhbk password=090bf4ff331f1181a615fdaa44038b861a20f8532c2612444b432002add70ebf");
-	$resultado=pg_query ($dbconexion,'SELECT * FROM public."VARIABLES" ORDER BY "FECHA" DESC LIMIT 1');
+	$resultado=pg_query ($dbconexion,'SELECT "BOTELLASLLENAS" FROM public."VARIABLES" ORDER BY "FECHA" DESC LIMIT 1');
 	return pg_fetch_all($resultado);
 	});
 
