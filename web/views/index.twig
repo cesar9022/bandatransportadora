@@ -42,14 +42,12 @@
 
 <script>
 window.onload = function(){
-  function Actualizar(){
     $.get('https://bandatransportadora.herokuapp.com/consultarConteo',function(respuesta){
       document.getElementById("counter").innerHTML = respuesta;
-    }
+     }
     alert("ok");
-  }
-  setInterval(Actualizar(),1000);
-}
+  setInterval(Actualizar,1000);
+};
 </script>
 
 {% endblock %}
